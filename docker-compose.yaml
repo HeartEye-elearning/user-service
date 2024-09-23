@@ -1,0 +1,13 @@
+# You can use this to create a local database with docker
+version: "3.9"
+services:
+  postgres:
+    image: postgres:13-alpine
+    restart: unless-stopped
+    shm_size: 256mb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=hearteye-user-service
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
