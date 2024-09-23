@@ -6,6 +6,7 @@ service for managing users
 ## Links
 - [insert PRD link]
 - [insert TST link]
+- [Swagger UI](http://localhost:8080/swagger-ui.html)
 
 
 ### Usage
