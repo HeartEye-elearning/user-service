@@ -1,0 +1,70 @@
+# Maven specific
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Compiled class files
+*.class
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Kotlin specific
+*.kotlin_module
+*.ktp
+
+# Spring Boot specific
+spring.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.sublime-project
+*.sublime-workspace
+.vscode/
+*.vscode/
+
+# Lombok generated files (if you're using Lombok)
+*.lombok.config
+
+# Environment variables
+.env
+*.env
+
+# Mac specific
+.DS_Store
+
+# Windows specific
+*.exe
+*.dll
+*.bat
+*.sh
+*.cmd
+
+# Logs and crash reports
+*.log
+*.pid
+
+# Node/npm files (if using frontend resources like React/Angular)
+node_modules/
+npm-debug.log
+yarn-error.log
+
