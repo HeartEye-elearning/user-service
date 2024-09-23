@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hearteye-user-service
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # or 'create', 'validate' depending on your needs
+    show-sql: true  # Optional: to log SQL queries
+    properties:
+      hibernate:
+        format_sql: true
