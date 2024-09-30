@@ -4,6 +4,7 @@ import com.hearteye.userservice.facades.UserFacade
 import com.hearteye.userservice.requests.CreateUserRequest
 import com.hearteye.userservice.responses.AllUsersResponse
 import com.hearteye.userservice.responses.UserByIdResponse
+import com.hearteye.userservice.utils.getLogger
 import java.util.UUID
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -15,7 +16,10 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/v1/users")
-class UserController(private val userFacade: UserFacade) : BaseController(), IUserController {
+class UserController(private val userFacade: UserFacade) : IUserController {
+
+    private val logger = getLogger()
+
     @GetMapping("/{id}")
     override fun getUserById(
         @PathVariable id: UUID
