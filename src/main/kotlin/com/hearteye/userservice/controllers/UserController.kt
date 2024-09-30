@@ -15,16 +15,18 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/v1/users")
-class UserController(private val userFacade: UserFacade) : IUserController {
+class UserController(private val userFacade: UserFacade) : BaseController(), IUserController {
     @GetMapping("/{id}")
     override fun getUserById(
         @PathVariable id: UUID
     ): ResponseEntity<UserByIdResponse> {
+        logger.info("Getting user by id: $id")
         return ResponseEntity.ok(userFacade.getUserById(id))
     }
 
     @GetMapping
     override fun getUsers(): ResponseEntity<List<AllUsersResponse>> {
+        logger.info("Getting all users")
         return ResponseEntity.ok(userFacade.getUsers())
     }
 
@@ -32,6 +34,7 @@ class UserController(private val userFacade: UserFacade) : IUserController {
     override fun createUser(
         @RequestBody request: CreateUserRequest
     ): ResponseEntity<UserByIdResponse> {
+        logger.info("Creating user")
         return ResponseEntity.ok(userFacade.createUser(request))
     }
 }
